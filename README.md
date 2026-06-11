@@ -60,6 +60,7 @@ Raw Data → SQL Transformation → BigQuery Data Warehouse → Google Sheets �
 ## 🔗 Project Deliverables
 
 [View Project Presentation](https://prezi.com/view/nJc2yY6aZLiF58LXA9Ql/?referral_token=WiGIBmlnB3FN)
+
 [View Google Sheets Analysis](https://docs.google.com/spreadsheets/d/1_V2K3ktgODB72YnIRaWkcZqf9Di0oL3waKoG0OCAIrg/edit?usp=sharing)
 
 
