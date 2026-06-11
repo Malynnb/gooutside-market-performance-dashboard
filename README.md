@@ -54,17 +54,6 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 Raw Data → SQL Transformation → BigQuery Data Warehouse → Google Sheets → Data Studio Dashboard → Business Insights
 
----
-
-## 📂 Repository Structure
-
-```text
-├── sql/
-├── dashboard/
-├── images/
-├── docs/
-└── README.md
-```
 
 ---
 
