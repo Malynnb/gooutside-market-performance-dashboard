@@ -33,7 +33,7 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 | Technology    | Purpose                                     |
 | ------------- | ------------------------------------------- |
-| SQL           | Data cleaning, transformation, and analysis |
+| SQL           | Table joins, business views, KPI creation, and analytical queries |
 | BigQuery      | Cloud data warehouse                        |
 |Google Sheets  | Data connection and reporting layer         |
 | Data Studio | Dashboard development and reporting         |
