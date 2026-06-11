@@ -1,29 +1,121 @@
-# SQL Scripts
+# /*
 
-## Overview
+# Project: GoOutside Market Performance Dashboard
 
-This folder contains the SQL queries developed in BigQuery for the GoOutside Market Performance Dashboard project.
+Description:
+This file contains KPI and analytical queries used
+to support executive reporting and business decision-making.
 
-The queries were used to:
+The queries answer key business questions related to:
 
-* Join multiple business datasets
-* Create analytical views for reporting
-* Generate key business metrics and KPIs
-* Support dashboard development in Looker Studio
+* Overall business performance
+* Market performance
+* Product performance
+* Retailer performance
+* Revenue trends
 
-The resulting datasets served as the foundation for pivot table analysis in Google Sheets and the final interactive dashboard.
+Tool:
+Google BigQuery
 
+Author:
+Malynn Buranawichian
+====================
 
----
+*/
 
-## Files
+-- ==========================================
+-- Executive Summary KPIs
+-- Business Question:
+-- How is the business performing overall?
+-- ==========================================
 
-| File                        | Description                                           |
-| --------------------------- | ----------------------------------------------------- |
-| dashboard_data_model.sql    | Main reporting dataset used for dashboard development |
-| market_performance_view.sql | Market-level performance analysis                     |
-| product_analysis_view.sql   | Product and category analysis                         |
-| kpi_calculations.sql        | KPI and business metric calculations                  |
+SELECT
+COUNT(*) AS Total_Orders,
+SUM(Revenue) AS Total_Revenue,
+COUNT(DISTINCT Country) AS Countries,
+COUNT(DISTINCT RetailerName) AS Retailers
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.business_view_v5`;
+
+-- ==========================================
+-- Revenue by Product Line
+-- Business Question:
+-- Which product lines generate the most revenue?
+-- ==========================================
+
+SELECT
+ProductLine,
+SUM(Revenue) AS Total_Revenue
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.business_view_v5`
+GROUP BY ProductLine
+ORDER BY Total_Revenue DESC;
+
+-- ==========================================
+-- Revenue by Country
+-- Business Question:
+-- Which markets generate the most revenue?
+-- ==========================================
+
+SELECT
+Country,
+SUM(Revenue) AS Total_Revenue
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.business_view_v5`
+GROUP BY Country
+ORDER BY Total_Revenue DESC;
+
+-- ==========================================
+-- Top Retailers
+-- Business Question:
+-- Which retailers contribute the most revenue?
+-- ==========================================
+
+SELECT
+RetailerName,
+SUM(Revenue) AS Total_Revenue
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.business_view_v5`
+GROUP BY RetailerName
+ORDER BY Total_Revenue DESC
+LIMIT 10;
+
+-- ==========================================
+-- Revenue Trend by Year
+-- Business Question:
+-- How has revenue changed over time?
+-- ==========================================
+
+SELECT
+Year,
+SUM(Revenue) AS Total_Revenue
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.business_view_v5`
+GROUP BY Year
+ORDER BY Year;
+
+-- ==========================================
+-- Revenue by Order Method
+-- Business Question:
+-- Which sales channels perform best?
+-- ==========================================
+
+SELECT
+OrderMethodType,
+SUM(Revenue) AS Total_Revenue
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.business_view_v5`
+GROUP BY OrderMethodType
+ORDER BY Total_Revenue DESC;
+
+-- ==========================================
+-- Top Products
+-- Business Question:
+-- Which products generate the highest revenue?
+-- ==========================================
+
+SELECT
+ProductName,
+SUM(Revenue) AS Total_Revenue
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.business_view_v5`
+GROUP BY ProductName
+ORDER BY Total_Revenue DESC
+LIMIT 10;
+
 
 
 ---
