@@ -1,0 +1,80 @@
+# /*
+
+# Project: GoOutside Market Performance Dashboard
+
+Description:
+This query creates the main business reporting view used
+throughout the GoOutside analytics project.
+
+Business Goal:
+Provide stakeholders with a centralized dataset for
+analyzing market performance, product trends, retailer
+activity, and revenue metrics across multiple countries.
+
+Data Sources:
+
+* sales
+* retailers
+* products
+* methods
+
+Key Transformations:
+
+* Join sales, retailer, product, and order method tables
+* Create reporting-friendly date dimensions
+* Calculate revenue at transaction level
+* Standardize fields for dashboard reporting
+
+Output Usage:
+
+* Google Sheets pivot table analysis
+* KPI calculations
+* Looker Studio dashboard development
+* Executive reporting
+
+Tool:
+Google BigQuery
+
+Author:
+Malynn Buranawichian
+
+====================================================
+*/
+
+SELECT
+sales.Date,
+
+```
+EXTRACT(YEAR FROM sales.Date) AS Year,
+EXTRACT(MONTH FROM sales.Date) AS Month,
+FORMAT_DATE('%b', sales.Date) AS MonthName,
+FORMAT_DATE('%Y-%m', sales.Date) AS YearMonth,
+
+retailers.Country,
+retailers.`Retailer name` AS RetailerName,
+retailers.Type AS RetailerType,
+
+methods.`Order method type` AS OrderMethodType,
+
+products.Product AS ProductName,
+products.`Product brand` AS ProductBrand,
+products.`Product line` AS ProductLine,
+products.`Product type` AS ProductType,
+products.`Product color` AS ProductColor,
+
+sales.Quantity,
+sales.`Unit sale price` AS UnitSalePrice,
+
+sales.Quantity * sales.`Unit sale price` AS Revenue
+```
+
+FROM `project-2f1f1ea6-bc17-4a02-b55.gooutside.sales` AS sales
+
+JOIN `project-2f1f1ea6-bc17-4a02-b55.gooutside.retailers` AS retailers
+ON sales.`Retailer code` = retailers.`Retailer code`
+
+JOIN `project-2f1f1ea6-bc17-4a02-b55.gooutside.methods` AS methods
+ON sales.`Order method code` = methods.`Order method code`
+
+JOIN `project-2f1f1ea6-bc17-4a02-b55.gooutside.products` AS products
+ON sales.`Product number` = products.`Product number`;
