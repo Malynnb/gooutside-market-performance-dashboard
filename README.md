@@ -13,7 +13,9 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 ---
 
-## 📊 Dashboard 
+## 📊 Dashboard Preview
+
+![Dashboard Preview](dashboard_preview.png)
 
 [View Interactive Dashboard](https://datastudio.google.com/reporting/07856002-a122-49f3-843a-ed59c5f3fc28)
 
