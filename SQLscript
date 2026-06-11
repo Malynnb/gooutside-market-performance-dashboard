@@ -1,0 +1,36 @@
+# SQL Scripts
+
+## Overview
+
+This folder contains the SQL queries developed in BigQuery for the GoOutside Market Performance Dashboard project.
+
+The queries were used to:
+
+* Join multiple business datasets
+* Create analytical views for reporting
+* Generate key business metrics and KPIs
+* Support dashboard development in Looker Studio
+
+The resulting datasets served as the foundation for pivot table analysis in Google Sheets and the final interactive dashboard.
+
+
+---
+
+## Files
+
+| File                        | Description                                           |
+| --------------------------- | ----------------------------------------------------- |
+| dashboard_data_model.sql    | Main reporting dataset used for dashboard development |
+| market_performance_view.sql | Market-level performance analysis                     |
+| product_analysis_view.sql   | Product and category analysis                         |
+| kpi_calculations.sql        | KPI and business metric calculations                  |
+
+
+---
+
+## Notes
+
+* Queries have been formatted and documented for portfolio purposes.
+* Sensitive project information and credentials have been removed.
+* Table and dataset names may be generalized where necessary.
+* The focus of these scripts is business analysis and reporting rather than data engineering or data cleaning.
