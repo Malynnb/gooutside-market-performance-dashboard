@@ -35,8 +35,8 @@ The solution transforms raw business data into actionable insights through SQL-b
 | ------------- | ------------------------------------------- |
 | SQL           | Data cleaning, transformation, and analysis |
 | BigQuery      | Cloud data warehouse                        |
+|Google Sheets  | Data connection and reporting layer         |
 | Data Studio | Dashboard development and reporting         |
-| Git & GitHub  | Version control and collaboration           |
 
 ---
 
@@ -52,7 +52,7 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 ## 🚀 Project Workflow
 
-Raw Data → SQL Transformation → BigQuery Data Warehouse → Data Studio Dashboard → Business Insights
+Raw Data → SQL Transformation → BigQuery Data Warehouse → Google Sheets → Data Studio Dashboard → Business Insights
 
 ---
 
@@ -67,6 +67,10 @@ Raw Data → SQL Transformation → BigQuery Data Warehouse → Data Studio Dash
 ```
 
 ---
+
+## 🔗 Project Deliverables
+
+[View Project Presentation](https://prezi.com/view/nJc2yY6aZLiF58LXA9Ql/?referral_token=WiGIBmlnB3FN)
 
 
 ## 👥 Team Project
