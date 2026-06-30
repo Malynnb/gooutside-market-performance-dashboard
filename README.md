@@ -3,7 +3,7 @@ Business Intelligence dashboard built with SQL and Data Studio to support market
 
 
 
-# 🌍 GoOutside Market Performance Dashboard
+# GoOutside Market Performance Dashboard
 
 ## Overview
 
@@ -13,7 +13,7 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 ---
 
-## 📊 Dashboard Preview
+## Dashboard Preview
 
 ![Dashboard Preview](dashboard_preview.png)
 
@@ -21,7 +21,7 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 ---
 
-## 🎯 Business Objectives
+##  Business Objectives
 
 * Monitor performance across multiple markets
 * Identify top-performing products and categories
@@ -31,7 +31,7 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology    | Purpose                                     |
 | ------------- | ------------------------------------------- |
@@ -42,7 +42,7 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 ---
 
-## 📈 Key Insights
+##  Key Insights
 
 * Market-level performance comparison across regions
 * Product category analysis and top-selling products
@@ -52,7 +52,7 @@ The solution transforms raw business data into actionable insights through SQL-b
 
 ---
 
-## 🚀 Project Workflow
+##  Project Workflow
 
 Raw Data → SQL Transformation → BigQuery Data Warehouse → Google Sheets → Data Studio Dashboard → Business Insights
 
@@ -66,7 +66,7 @@ Raw Data → SQL Transformation → BigQuery Data Warehouse → Google Sheets �
 [View Google Sheets Analysis](https://docs.google.com/spreadsheets/d/1_V2K3ktgODB72YnIRaWkcZqf9Di0oL3waKoG0OCAIrg/edit?usp=sharing)
 
 
-## 👥 Team Project
+## Team Project
 
 Developed as part of a collaborative Data Analytics project focused on designing an end-to-end Business Intelligence solution. The project covered data transformation, cloud data warehousing, dashboard development, and stakeholder-focused reporting to support strategic business decisions.
 
